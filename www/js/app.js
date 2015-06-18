@@ -75,7 +75,10 @@ angular.module('starter', ['ionic','ngCordova'])
             options.fileName = fileURL.substr(fileURL.lastIndexOf('/') + 1);
             options.mimeType = "image/jpeg";
             options.chunkedMode = false;
-            var uri = encodeURI("http://api.fangshijie.cn/api/Common/ImgUpload");
+
+            // 服务端上传地址
+            var uri = encodeURI("http://xxxx");
+
             var ft = new FileTransfer();
 
             ft.upload(fileURL, uri, onSuccess, onFail, options);
